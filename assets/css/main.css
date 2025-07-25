@@ -1267,9 +1267,34 @@ section,
   color: var(--accent-color);
 }
 
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+
+
+/* === Fixes for horizontal scroll issue and responsive layout === */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+  }
+
+/* Remove margin-left on main and footer for small screens */
+@media (max-width: 1199px) {
+  main,
+  #footer {
+    margin-left: 0 !important;
+  }
+}
+
+/* Ensure hero image does not overflow */
+.hero img {
+  max-width: 100%;
+  height: auto;
 }
